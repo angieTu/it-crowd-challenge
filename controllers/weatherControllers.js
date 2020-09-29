@@ -58,4 +58,4 @@ const getCity = async (req, res) => {
 //   }
 // };
 
-module.exports = { getCity, postCity, getCities };
+module.exports = { getCity, getCities };
