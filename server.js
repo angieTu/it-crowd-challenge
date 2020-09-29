@@ -5,10 +5,7 @@ require("dotenv").config();
 
 const port = process.env.PORT || 8080;
 
-mongoose.connect(
-  `mongodb+srv://angietur:${process.env.PASSWORD}@cluster0.wky5n.gcp.mongodb.net/challenge?retryWrites=true&w=majority`,
-  { useNewUrlParser: true }
-);
+mongoose.connect(process.env.DB_URL, { useNewUrlParser: true });
 
 app.listen(port, () => {
   console.log(`App corriendo en puerto ${port}`);
